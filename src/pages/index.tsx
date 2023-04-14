@@ -1,9 +1,9 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import tw from "tailwind-styled-components";
+import ExampleComponent from '@/components/ExampleComponent';
+import ExampleCompositionComponent from '@/components/ExampleCompositionComponent';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
 //#region Styled Components
-const Row = tw.div`w-[100px] h-[100px] bg-pink`;
 
 //#endregion
 
@@ -16,8 +16,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icso" />
       </Head>
-      <Row>fgsdfsd</Row>
-      <div className="bg-">fgsdfsd</div>
+      <ExampleCompositionComponent name="This is Composition Exammple Component" header={<ExampleComponent name="Header" />} footer={<ExampleComponent name="Footer" />}>
+        <ExampleComponent name="Children" />
+      </ExampleCompositionComponent>
     </Fragment>
   );
 }
