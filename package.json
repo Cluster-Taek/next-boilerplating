@@ -7,7 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,ts,tsx}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@types/node": "18.15.5",
@@ -27,10 +33,17 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "autoprefixer": "^10.4.14",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.1.0",
+    "prettier": "^2.8.7",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.2.7"
-  }
+  },
+  "description": "Boilerplate of NextJS with Convention",
+  "main": "index.js",
+  "repository": "https://github.com/Cluster-Taek/next-boilerplating.git",
+  "author": "Cluster-Taek <yst811@naver.com>",
+  "license": "MIT"
 }
