@@ -3,9 +3,7 @@
   "semi": true,
   "useTabs": false,
   "tabWidth": 2,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "printWidth": 300,
-  "parser": "babel",
-  "bracketSpacing": true,
-  "arrowParens": "avoid"
+  "bracketSpacing": true
 }
